@@ -78,4 +78,5 @@
     </nav>
 </div>
 <!-- Navbar -->
-
+</body>
+</html>
