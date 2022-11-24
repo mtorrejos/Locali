@@ -32,7 +32,7 @@
                         </li>
                         <?php
                             if(isset($_SESSION['email'])){
-                                echo '<a class="nav-link text-body small">Logged in as: '. $_SESSION['email'] . '</a>';
+                                echo '<a class="nav-link text-body small">Logged in as: '. $_SESSION['email'] . '</a><br><a href="Logout.php>Logout</a>';
                             }
                             else {
                                 echo '<li class="nav-item border-right border-secondary">
