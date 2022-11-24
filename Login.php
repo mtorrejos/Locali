@@ -32,7 +32,7 @@ if(isset($_POST['email'])){
         $result = 0;
     }
     else {
-        echo "<h3>Incorrect Username/password.</h3>";
+        $error [] = 'Incorrect email or password! Please try again.';
     }
 
     }
@@ -41,6 +41,14 @@ if(isset($_POST['email'])){
 <div class="form-container">
     <form action="" method="post">
         <h3> Login </h3>
+        <?php
+        if(isset($error)){
+            foreach($error as $error) {
+                echo '<span class="error-msg">' .$error. ' </span>';
+            };
+        };
+        $error = NULL;
+        ?>
         <input type="email" name="email" required placeholder="E-mail address">
         <input type="password" name="password" required placeholder="Password">
         <input type="submit" value="Login" class="form-btn">
