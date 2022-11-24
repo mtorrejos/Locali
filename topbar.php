@@ -32,7 +32,7 @@
                         </li>
                         <?php
                             if(isset($_SESSION['email'])){
-                                echo '<a class="nav-link text-body small">Logged in as: '. $_SESSION['email'] . '</a><br><a href="Logout.php>Logout</a>';
+                                echo '<a class="nav-link text-body small">Logged in as: '. $_SESSION['email'] .'</a>';
                             }
                             else {
                                 echo '<li class="nav-item border-right border-secondary">
@@ -44,7 +44,7 @@
                 </nav>
             </div>
         </div>
-    </div> 		
+    </div>      
 <!-- Navbar -->
 <div class="container-fluid p-0">
     <nav class="navbar navbar-expand-lg bg-primary navbar-dark py-2 py-lg-0 px-lg-5">
