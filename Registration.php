@@ -37,6 +37,7 @@ if(isset($_REQUEST['fName'])){
     else{
     $sql = "INSERT INTO `localiusers` (`FirstName`, `LastName`, `Email`, `Pass`, `Gender`) VALUES('$fName', '$lName', '$email', '$pword', '$gender')";
     $con = mysqli_connect($servername, $username, $password, "member_db");
+    $accountConf = 'Account Successfully Created!';
     if($con->query($sql)){}
     }
 }
@@ -51,6 +52,7 @@ if(isset($_REQUEST['fName'])){
             };
         };
         $error = NULL;
+        $accountConf = NULL;
         ?>
 
         <input type="text" name="fName" required="true" placeholder="First name">
