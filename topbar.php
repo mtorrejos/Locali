@@ -33,7 +33,7 @@
                         <?php
                             if(isset($_SESSION['email'])){
                                 echo '<li class="nav-item border-right border-secondary">
-                                    <a class="nav-link text-body small">Logged in as: '. $_SESSION['email'] .'</a><a href="Logout.php">Logout</a>';
+                                    <a class="nav-link text-body small">Logged in as: '. $_SESSION['email'] .'</a><a href="Logout.php">Logout</a>
                                     </li>';
                             }
                             else {
