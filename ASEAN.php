@@ -1,5 +1,5 @@
 <?php
-	include_once 'topbar.php';
+	
 ?>
 <!--Sidebar-->
 <div id="aside">
