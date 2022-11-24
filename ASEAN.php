@@ -20,24 +20,7 @@
                     </div>
                 </div>
                 <div class="d-flex align-items-center bg-white mb-4" style="height: 105px;">
-                    <img class="img-thumbnail h-100" src="img/latest-movies.jpg" alt="Photo of Mike de Leon's film classic 'Itim'">
-                    <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
-                        <div class="mb-2">
-                            <a class="badge badge-dark text-uppercase font-weight-semi-bold p-1 mr-2" href="EntertainmentNews.php">Movie</a>
-                            <a><small>November 16, 2022</small></a>
-                        </div>
-                        <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="QCinema.php">Local, international highlights at QCinema</a>
-                    </div>		
-                </div>
-                <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
-                    <img class="img-thumbnail h-100" src="img/latest-music.jpg" alt="Photo of Beyonce performing">
-                    <div class="w-100 h-110 px-3 d-flex flex-column justify-content-center border border-left-0">
-                        <div class="mb-2">
-                            <a class="badge badge-dark text-uppercase font-weight-semi-bold p-1 mr-2" href="EntertainmentNews.php">Music</a>
-                            <a><small>November 16, 2022</small></a>
-                        </div>
-                        <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="Beyonce.php">Beyonce leads Grammy nominees with 9, ahead of Kendrick Lamar and Adele</a>
-                    </div>
+                    <img cla
                 </div>
         </div>
     </div>
