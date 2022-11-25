@@ -44,6 +44,9 @@
                                 echo '<li class="nav-item border-right border-secondary">
                                     <a class="nav-link text-body small">Logged in as: '. $_SESSION['email'] .'</a>
                                     </li>';
+                                echo '<li class="nav-item border-right border-secondary">
+                                    <a class="nav-link text-body small" href="Logout.php">Logout</a>
+                                    </li>';
                             }
                             else {
                                 echo '<li class="nav-item border-right border-secondary">
@@ -51,9 +54,6 @@
                                     </li>';
                             }
                         ?>
-                        <li class="nav-item border-right border-secondary">
-                            <a class="nav-link text-body small" href="Logout.php">Logout</a>
-                        </li>
                     </ul>
                 </nav>
             </div>
