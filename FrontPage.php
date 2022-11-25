@@ -147,6 +147,8 @@
     </div>
 
 <!-- Newsletter -->
+<form action="" method="post" accept-charset="utf-8">
+
     <div class="container-fluid pt-5 mb-3 w-50">
         <div class="section-title mb-0">
             <h4 class="m-0 text-uppercase font-weight-bold">Newsletter</h4>
@@ -154,9 +156,9 @@
         <div class="bg-white text-center border border-top-0 p-3">
             <p>Want to receive updates? Sign up for our Newsletter</p>
                 <div class="input-group mb-2" style="width: 100%;">
-                    <input type="text" class="form-control form-control-lg" placeholder="Your Email">
+                    <input type="email" class="form-control form-control-lg" name='newsletter_email' placeholder="Your Email">
                         <div class="input-group-append">
-                            <button class="btn btn-primary font-weight-bold px-3">Sign Up</button>
+                            <input type="submit" name="submit" value="Sign Up" class="btn btn-primary font-weight-bold px-3">
                         </div>
                     </div>
                 </div>
@@ -164,21 +166,23 @@
     
 <?php #Newsletter script
     require('config.php');
-    if(isset($_REQUEST['email'])){
-        $email = stripslashes($_REQUEST['email']);
+    if(isset($_POST['newsletter_email'])){
+        $email = stripslashes($_REQUEST['newsletter_email']);
         $email = mysqli_real_escape_string($con, $email);
 
         $accDup = " SELECT * FROM localinewsletter WHERE email = '$email'";
         $result = mysqli_query($con, $accDup);
         if(mysqli_num_rows($result) > 0) { echo '<script> alert("Email already has a newletter subscription!") </script>'; }
-        
+
+        else if($_REQUEST['newsletter_email'] == NULL){ echo '<script> alert("No Email entered!") </script>'; }
         else {
             $sql = "INSERT INTO localinewsletter (Email) VALUES('$email')";
             $con = mysqli_connect($servername, $username, $password, "member_db");
-            if($con->query($sql)){ echo '<script> alert("Newsletter subscription approved! </br> Thank you!") </script>'; }
+            if($con->query($sql)){ echo '<script> alert("Newsletter subscription approved! \nThank you!") </script>'; }
             }
         }
     ?>
+</form>
     <!-- Newsletter  -->
 
 
