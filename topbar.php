@@ -26,14 +26,23 @@
                     <ul class="navbar-nav ml-n2">
                         <li class="nav-item border-right border-secondary"> 
                             <a class="nav-link text-body small">  <!--date time-->
-                                <div class="date"></div> 
-                                <div class="time"></div>
+                                <table>
+                                    <td>
+                                        <div class="time"></div>
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        <div class="date"></div>
+                                    <td>								
+                                </table>
                             </a>
                         </li>
                         <?php
                             if(isset($_SESSION['email'])){
                                 echo '<li class="nav-item border-right border-secondary">
-                                    <a class="nav-link text-body small">Logged in as: '. $_SESSION['email'] .'</a><a href="Logout.php">Logout</a>
+                                    <a class="nav-link text-body small">Logged in as: '. $_SESSION['email'] .'</a>
                                     </li>';
                             }
                             else {
@@ -42,6 +51,9 @@
                                     </li>';
                             }
                         ?>
+                        <li class="nav-item border-right border-secondary">
+                            <a class="nav-link text-body small" href="Logout.php">Logout</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
